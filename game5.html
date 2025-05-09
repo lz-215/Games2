@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Free Online Games to Play Now | QiJin Games</title>
+    <meta name="description" content="Play Superball, Immortals Revenge, Witch Pong and more free online games at QiJin Games. No downloads required, instant play in your browser!">
+    <link rel="canonical" href="https://qijindianzi.com" />
+    <meta name="keywords" content="Superball, Immortals Revenge, Pop Pow Witch Pong, Cubes Crusher, Tangle Master, free online games">
+    
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPHGTFNNQR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EPHGTFNNQR');
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.stars.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'theme-purple': '#8A2BE2',
+                        'theme-blue': '#4169E1',
+                        'theme-dark': '#121212',
+                        'theme-darker': '#0A0A0A',
+                        'theme-gray': '#2A2A2A'
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        
+        .game-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 25px -5px rgba(138, 43, 226, 0.4);
+        }
+        
+        .play-button {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+        
+        .game-thumbnail {
+            transition: transform 0.5s ease;
+            overflow: hidden;
+        }
+        
+        .game-thumbnail:hover img {
+            transform: scale(1.05);
+        }
+        
+        .star-rating {
+            color: #FFD700;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #8A2BE2;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4169E1;
+        }
+        
+        /* Animated background elements */
+        .floating-star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.2;
+            animation: twinkle 4s infinite ease-in-out;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+
+<body class="bg-theme-dark text-white min-h-screen">
+    <div id="vanta-bg" class="fixed inset-0 -z-10"></div>
+    
+    <!-- Animated stars -->
+    <div class="stars-container fixed inset-0 -z-5 overflow-hidden"></div>
+    
+    <!-- Navigation -->
+    <nav class="bg-theme-darker bg-opacity-90 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-purple-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-theme-purple to-theme-blue bg-clip-text text-transparent">QiJin Games</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#featured" class="text-gray-300 hover:text-white transition">Featured Games</a>
+                    <a href="#popular" class="text-gray-300 hover:text-white transition">Popular Games</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition">About Us</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-300 hover:text-white">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-theme-purple to-theme-blue bg-clip-text text-transparent">
+                Play the Best Free Online Games
+            </h1>
+            <p class="text-xl max-w-3xl mx-auto mb-8 text-gray-300">
+                Instant play, no downloads required. Join thousands of players enjoying our curated selection of top-rated games.
+            </p>
+        </section>
+
+        <!-- Featured Game - Superball -->
+        <section id="featured" class="mb-24">
+            <div class="bg-theme-gray rounded-xl shadow-xl overflow-hidden transform transition-all duration-500 hover:shadow-purple-900/30">
+                <div class="p-8">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-theme-purple to-theme-blue bg-clip-text text-transparent mb-2">
+                                Superball
+                            </h2>
+                            <p class="text-gray-300 text-lg">
+                                Master gravity-defying ball physics in this addictive arcade challenge
+                            </p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <span class="bg-theme-purple text-white px-4 py-2 rounded-full text-sm font-semibold inline-flex items-center">
+                                <i class="fas fa-gamepad mr-2"></i>FREE TO PLAY
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Game description -->
+                    <div class="mb-8">
+                        <p class="text-gray-300 mb-6">
+                            Superball is an exciting physics-based arcade game that challenges your timing and precision. Control a bouncing ball through increasingly difficult levels filled with obstacles, spikes, and moving platforms. With simple one-touch controls but deep gameplay mechanics, Superball offers the perfect balance of accessibility and challenge. Master the perfect bounce timing, collect power-ups, and discover hidden paths to achieve the highest scores. With its vibrant visuals, satisfying physics, and progressively challenging levels, Superball delivers an addictive gaming experience that will keep you coming back for "just one more try."
+                        </p>
+                    </div>
+
+                    <!-- Game screenshots -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                        <div class="game-thumbnail rounded-lg overflow-hidden">
+                            <img src="images/superball-1.png" alt="Superball gameplay screenshot" class="w-full h-48 object-cover">
+                            <p class="text-center text-sm text-gray-400 mt-2">Navigate through challenging obstacles</p>
+                        </div>
+                        <div class="game-thumbnail rounded-lg overflow-hidden">
+                            <img src="images/superball-2.png" alt="Superball gameplay screenshot" class="w-full h-48 object-cover">
+                            <p class="text-center text-sm text-gray-400 mt-2">Collect power-ups to enhance your ball</p>
+                        </div>
+                        <div class="game-thumbnail rounded-lg overflow-hidden">
+                            <img src="images/superball-3.png" alt="Superball gameplay screenshot" class="w-full h-48 object-cover">
+                            <p class="text-center text-sm text-gray-400 mt-2">Master timing to overcome difficult jumps</p>
+                        </div>
+                    </div>
+
+                    <!-- Play button -->
+                    <div class="flex justify-center mb-8">
+                        <a href="https://www.crazygames.com/game/superball-neg" target="_blank" rel="noopener" 
+                           class="play-button bg-gradient-to-r from-theme-purple to-theme-blue text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg inline-flex items-center">
+                            <i class="fas fa-play mr-2"></i>
+                            Play Now - It's Free!
+                        </a>
+                    </div>
+
+                    <!-- Game iframe preview -->
+                    <div class="relative w-full max-w-4xl mx-auto mb-8 rounded-lg overflow-hidden shadow-2xl">
+                        <a href="https://www.crazygames.com/game/superball-neg" target="_blank" rel="noopener" class="block relative group">
+                            <img src="images/superball-4.jpg" alt="Superball game preview" class="w-full rounded-lg" style="height:400px; object-fit:cover;">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                                <div class="play-button bg-white bg-opacity-20 backdrop-blur-sm p-6 rounded-full">
+                                    <i class="fas fa-play text-4xl text-white"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Game tips -->
+                    <div class="bg-theme-darker p-6 rounded-lg mb-8">
+                        <h3 class="text-xl font-semibold mb-4 text-theme-purple">Pro Tips for Superball</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-lightbulb text-theme-purple mt-1 mr-3"></i>
+                                <span>Time your taps carefully - short taps for small jumps, long presses for higher jumps</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-lightbulb text-theme-purple mt-1 mr-3"></i>
+                                <span>Look ahead to plan your trajectory through multiple obstacles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-lightbulb text-theme-purple mt-1 mr-3"></i>
+                                <span>Collect the blue power-ups for temporary invincibility</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-lightbulb text-theme-purple mt-1 mr-3"></i>
+                                <span>Watch for hidden paths in the ceiling that may contain bonus points</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Gameplay video -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4 text-theme-blue">Gameplay Walkthrough</h3>
+                        <div class="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-xl">
+                            <a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener" class="block relative group">
+                                <img src="images/superball-5.png" alt="Superball gameplay video" class="w-full rounded-lg" style="height:300px; object-fit:cover;">
+                                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                                    <div class="play-button bg-red-600 p-4 rounded-full">
+                                        <i class="fab fa-youtube text-3xl text-white"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Game features and controls -->
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-theme-purple">Game Features</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-purple mr-2"></i>
+                                    50+ challenging levels
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-purple mr-2"></i>
+                                    Realistic physics engine
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-purple mr-2"></i>
+                                    Multiple power-ups and abilities
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-purple mr-2"></i>
+                                    Global leaderboards
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-theme-blue">How to Play</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-blue mr-2"></i>
+                                    Click or tap to jump
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-blue mr-2"></i>
+                                    Hold longer for higher jumps
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-blue mr-2"></i>
+                                    Collect stars for bonus points
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-blue mr-2"></i>
+                                    Avoid red obstacles and spikes
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- User reviews -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4 text-white">Player Reviews</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-theme-darker p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <img src="images/avatar-1.jpg" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+                                    <div>
+                                        <h4 class="font-semibold">Alex T.</h4>
+                                        <div class="flex star-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300">"Superball is incredibly addictive! The physics feel just right, and the difficulty curve is perfect. I've spent hours trying to beat my high score."</p>
+                            </div>
+                            <div class="bg-theme-darker p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <img src="images/avatar-2.jpg" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+                                    <div>
+                                        <h4 class="font-semibold">Mia K.</h4>
+                                        <div class="flex star-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300">"Simple concept but extremely challenging. The controls are responsive and the game runs smoothly. Great for quick gaming sessions!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Games Section -->
+        <section id="popular" class="mt-16 mb-16">
+            <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-theme-purple to-theme-blue bg-clip-text text-transparent">
+                More Games You'll Love
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Immortals Revenge -->
+                <div class="game-card bg-theme-gray rounded-xl shadow-lg overflow-hidden">
+                    <a href="https://www.crazygames.com/game/immortals-revenge" target="_blank" rel="noopener" class="block">
+                        <div class="game-thumbnail h-48 overflow-hidden">
+                            <img src="images/immortalsrevenge.png" alt="Immortals Revenge" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Immortals Revenge</h3>
+                            <p class="text-gray-300 text-sm mb-3">Battle through hordes of enemies in this action-packed roguelike adventure with unique character abilities and upgrades.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex star-rating text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="text-gray-400 ml-1">4.5</span>
+                                </div>
+                                <button class="play-button bg-theme-purple hover:bg-purple-700 text-white px-3 py-1 rounded-full text-sm">
+                                    Play Now
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Pop! Pow! Witch Pong! -->
+                <div class="game-card bg-theme-gray rounded-xl shadow-lg overflow-hidden">
+                    <a href="https://www.crazygames.com/game/witch-pong" target="_blank" rel="noopener" class="block">
+                        <div class="game-thumbnail h-48 overflow-hidden">
+                            <img src="images/pop!pow!witchpong!.png" alt="Pop! Pow! Witch Pong!" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Pop! Pow! Witch Pong!</h3>
+                            <p class="text-gray-300 text-sm mb-3">A magical twist on the classic pong game with spells, potions, and enchanted paddles in a whimsical witchy world.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex star-rating text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="text-gray-400 ml-1">4.0</span>
+                                </div>
+                                <button class="play-button bg-theme-purple hover:bg-purple-700 text-white px-3 py-1 rounded-full text-sm">
+                                    Play Now
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cubes Crusher -->
+                <div class="game-card bg-theme-gray rounded-xl shadow-lg overflow-hidden">
+                    <a href="https://www.crazygames.com/game/cubes-crusher" target="_blank" rel="noopener" class="block">
+                        <div class="game-thumbnail h-48 overflow-hidden">
+                            <img src="images/cubescrusher.png" alt="Cubes Crusher" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Cubes Crusher</h3>
+                            <p class="text-gray-300 text-sm mb-3">Match and crush colorful cubes in this satisfying puzzle game with hundreds of challenging levels and special power-ups.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex star-rating text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="text-gray-400 ml-1">4.8</span>
+                                </div>
+                                <button class="play-button bg-theme-purple hover:bg-purple-700 text-white px-3 py-1 rounded-full text-sm">
+                                    Play Now
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Tangle Master -->
+                <div class="game-card bg-theme-gray rounded-xl shadow-lg overflow-hidden">
+                    <a href="https://www.crazygames.com/game/tangle-master" target="_blank" rel="noopener" class="block">
+                        <div class="game-thumbnail h-48 overflow-hidden">
+                            <img src="images/tanglemaster.png" alt="Tangle Master" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Tangle Master</h3>
+                            <p class="text-gray-300 text-sm mb-3">Untangle complex knots of colorful ropes in this relaxing yet challenging puzzle game that tests your spatial reasoning.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex star-rating text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="text-gray-400 ml-1">4.6</span>
+                                </div>
+                                <button class="play-button bg-theme-purple hover:bg-purple-700 text-white px-3 py-1 rounded-full text-sm">
+                                    Play Now
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="mt-24 bg-theme-gray rounded-xl p-8 shadow-lg">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-4">Stay Updated with New Games</h2>
+                <p class="text-gray-300 mb-6">Subscribe to our newsletter to get weekly updates on new game releases and gaming tips.</p>
+                <form class="max-w-md mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-2">
+                        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded-full bg-theme-darker text-white border border-gray-700 focus:outline-none focus:border-theme-purple">
+                        <button type="submit" class="bg-theme-purple hover:bg-purple-700 text-white px-6 py-2 rounded-full">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-theme-darker mt-16 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">QiJin Games</h3>
+                    <p class="text-gray-400">Your ultimate destination for free online gaming entertainment.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#featured" class="text-gray-400 hover:text-theme-purple transition">Featured Games</a></li>
+                        <li><a href="#popular" class="text-gray-400 hover:text-theme-purple transition">Popular Games</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-theme-purple transition">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-theme-purple transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-theme-purple transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-theme-purple transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-theme-purple transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-theme-purple transition">
+                            <i class="fab fa-discord text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p><a href="https://beian.miit.gov.cn" rel="nofollow">渝ICP备2024032264号</a></p>
+                <p>&copy; Contact Us:ytsgabcde2323@2925.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js stars effect
+        let vantaEffect = null;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            vantaEffect = VANTA.STARS({
+                el: "#vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x8a2be2,
+                backgroundColor: 0x121212,
+                size: 1.5,
+                speed: 0.5
+            });
+            
+            // Create animated stars
+            createStars();
+        });
+        
+        // Create floating stars in the background
+        function createStars() {
+            const starsContainer = document.querySelector('.stars-container');
+            const starCount = 50;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('floating-star');
+                
+                // Random size
+                const size = Math.random() * 3 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // Random position
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                star.style.left = `${posX}%`;
+                star.style.top = `${posY}%`;
+                
+                // Random animation delay
+                const delay = Math.random
